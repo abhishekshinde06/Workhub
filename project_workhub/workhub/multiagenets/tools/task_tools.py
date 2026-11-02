@@ -4,7 +4,7 @@ from workhub.task.schema import CreateTask,UpdateTask
 from langchain.tools import tool
 from workhub.task.service import service_create_task,service_assign_developer,service_update_task,service_delete_task
 
-def task_tools(db,current_user) :
+def get_task_tools(db,current_user) :
     @tool(args_schema=CreateTask)
     async  def create_new_task(title,description,assigned_id,project_id) :
         request = CreateTask(title=title,description=description,assigned_id=assigned_id,project_id = project_id)

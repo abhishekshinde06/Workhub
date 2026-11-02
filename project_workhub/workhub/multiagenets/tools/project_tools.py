@@ -4,7 +4,7 @@ from sqlalchemy import select
 from workhub.projects.service import service_create_project,service_update_project,service_show_project,service_delete_project
 from workhub.projects.models import Project
 
-def Project_tools(db,current_user) :
+def get_project_tools(db,current_user) :
     @tool
     async def list_projects (db):
         """It Shows all projects"""
