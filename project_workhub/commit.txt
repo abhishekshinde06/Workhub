@@ -1,0 +1,39 @@
+fix(auth): call get_new_access_token with args instead of returning function reference
+
+fix(superadmin): check caller's role instead of target user's role in service_make_admin
+
+fix(superadmin): check user existence before accessing user.role in service_make_admin
+
+fix(admin): require authentication on get_all_users, get_user, and delete_user routes
+
+feat(auth): add require_role dependency for reusable role-based access checks
+
+refactor(admin): use require_role dependency instead of ad hoc role checks
+
+refactor(superadmin): use require_role dependency instead of ad hoc role checks
+
+feat(user_profile): implement update_user_detail to actually update and commit user data
+
+fix(superadmin): exclude superadmin role, not just admin, from normal users list
+
+security(auth): move SECRET_KEY to environment variable instead of hardcoding it
+
+refactor(auth): remove duplicated SECRET_KEY, import from auth_setting instead
+
+chore: add .env.example with placeholder for JWT_SECRET_KEY
+
+refactor(auth): replace debug print statements with logging
+
+refactor(admin): replace debug print statements with logging
+
+refactor(superadmin): remove debug print statement
+
+fix(auth): correct typo serivce_forgot_password to service_forgot_password
+
+fix(auth): correct typo plan_password to plain_password in verify_password
+
+refactor(admin): flatten routers folder into single router.py
+
+chore: remove committed log file superadmin/audit _role.log
+
+chore: add .gitignore for __pycache__ and log files
